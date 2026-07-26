@@ -48,7 +48,7 @@ docker images | grep todo-app
 
 ### Print 2 — aplicação rodando com tarefas cadastradas
 
-*[Adicionar print do navegador em http://localhost:3000 com 2-3 tarefas cadastradas]*
+*![App Rodando](./docs/imagens/03-app-rodando.png.png)*
 
 ---
 
