@@ -81,11 +81,12 @@ docker run -d -p 3000:3000 -v todo-db:/etc/todos --name todo todo-app:v1
 
 ### Print 3 — SEM volume: dados perdidos ao recriar o container
 
-*[Print do navegador mostrando lista vazia após remover e recriar o container sem -v]*
+*![Sem Volume - Lista Vazia](./docs/imagens/04-sem-volume-lista-vazia.png)*
 
 ### Print 4 — COM volume: dados preservados
 
-*[Print do navegador mostrando as mesmas tarefas após remover e recriar o container com -v]*
+*![Com Volume - Dados Persistem](./docs/imagens/05-com-volume-dados-persistem.png.png)*
+*![Docker Volume List](./docs/imagens/06-docker-volume-ls.png.png)![Com Volume - Dados Persistem](./docs/imagens/05-com-volume-dados-persistem.png.png)*
 
 ### Diferença entre `docker compose down` e `docker compose down -v`
 
