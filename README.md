@@ -44,7 +44,7 @@ docker build -t todo-app:v1 .
 docker images | grep todo-app
 ```
 
-*[Adicionar print mostrando a construção bem-sucedida e o tamanho da imagem]*
+*![Docker Build](./docs/imagens/01-docker-build.png.png)*
 
 ### Print 2 — aplicação rodando com tarefas cadastradas
 
