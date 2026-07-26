@@ -113,7 +113,9 @@ Docker fornece um serviço de DNS interno na rede. Quando o app faz uma requisi�
 docker network inspect todo-net
 ```
 
-*[Print mostrando os dois containers (app e mysql) conectados na mesma rede]*
+*![Docker Network Inspect](./docs/imagens/07-docker-network-inspect.png)*
+*![Docker Network Inspect](./docs/imagens/07-docker-network-inspect1.png)*
+*![MySQL Select Tarefas](./docs/imagens/08-mysql-select-tarefas.png)*
 
 ### Print 6 — dados dentro do MySQL
 
