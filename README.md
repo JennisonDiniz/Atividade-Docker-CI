@@ -154,7 +154,7 @@ docker compose ps
 ![Compose - Dados Persistem](./docs/imagens/10-compose-down-dados-persistem.png)
 *Após docker compose down (sem -v), dados continuam após up*
 
-![Compose - Dados Persistem](./docs/imagens/11-compose-down-v-lista-vazia)
+![Compose - Dados Persistem](./docs/imagens/11-compose-down-v-lista-vazia.png)
 
 ```bash
 # Criar tarefas no navegador
