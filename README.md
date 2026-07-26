@@ -154,8 +154,6 @@ docker compose ps
 ![Compose - Dados Persistem](./docs/imagens/10-compose-down-dados-persistem.png)
 *Após docker compose down (sem -v), dados continuam após up*
 
-![Compose - Dados Persistem](./docs/imagens/11-compose-down-v-lista-vazia.png)
-
 ```bash
 # Criar tarefas no navegador
 docker compose down                # sem -v: derruba containers, mantém volume
@@ -167,7 +165,7 @@ docker compose up -d
 # Lista deve estar vazia -> PRINT
 
 
-![Compose - Down -v Lista Vazia](./docs/imagens/11-compose-down-v-lista-vazia.png)
+![Compose - Dados Persistem](./docs/imagens/11-compose-down-v-lista-vazia.png)
 *Após docker compose down -v, volume é deletado e lista fica vazia*
 ```
 
