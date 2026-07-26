@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Docker
+        run: |
+          docker --version
+          docker compose --version
+
+      - name: Validate Docker Compose config
+        run: docker compose config
+
+      - name: Build Docker image
+        run: docker compose build
+
+      - name: Start services
+        run: docker compose up -d
+
+      - name: Wait for app to be ready
+        run: |
+          echo "Aguardando aplicação iniciar..."
+          for i in {1..30}; do
+            if curl -f http://localhost:3000/items > /dev/null 2>&1; then
+              echo "✅ App respondendo!"
+              exit 0
+            fi
+            echo "⏳ Tentativa $i/30..."
+            sleep 3
+          done
+          echo "❌ Timeout"
+          docker compose logs
+          exit 1
+
+      - name: Test API - List items
+        run: curl -v http://localhost:3000/items
+
+      - name: Test API - Create item
+        run: |
+          curl -X POST http://localhost:3000/items \
+            -H "Content-Type: application/json" \
+            -d '{"name":"Teste CI","done":false}'
+
+      - name: Cleanup
+        if: always()
+        run: docker compose down -v
