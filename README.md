@@ -115,7 +115,6 @@ docker network inspect todo-net
 
 *![Docker Network Inspect](./docs/imagens/07-docker-network-inspect.png)*
 *![Docker Network Inspect](./docs/imagens/07-docker-network-inspect1.png)*
-*![MySQL Select Tarefas](./docs/imagens/08-mysql-select-tarefas.png)*
 
 ### Print 6 — dados dentro do MySQL
 
@@ -124,7 +123,7 @@ docker exec -it mysql mysql -u root -psecret todos
 select * from todo_items;
 ```
 
-*[Print do resultado do SELECT mostrando as tarefas cadastradas]*
+*![MySQL Select Tarefas](./docs/imagens/08-mysql-select-tarefas.png)*
 
 ---
 
