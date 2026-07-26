@@ -143,9 +143,17 @@ select * from todo_items;
 docker compose ps
 ```
 
-*[Print mostrando ambos os serviços (app e db) em estado "running"]*
+![Docker Compose PS](./docs/imagens/09-docker-compose-ps.png)
+*App e MySQL rodando via Docker Compose*
+
+![Compose - App Rodando](./docs/imagens/10-compose-app-rodando.png)
+*Tarefas criadas na app*
+
 
 ### Teste de persistência obrigatório
+
+![Compose - Dados Persistem](./docs/imagens/10-compose-down-dados-persistem.png)
+*Após docker compose down (sem -v), dados continuam após up*
 
 ```bash
 # Criar tarefas no navegador
@@ -156,6 +164,10 @@ docker compose up -d
 docker compose down -v             # agora apaga o volume
 docker compose up -d
 # Lista deve estar vazia -> PRINT
+
+
+![Compose - Down -v Lista Vazia](./docs/imagens/11-compose-down-v-lista-vazia.png)
+*Após docker compose down -v, volume é deletado e lista fica vazia*
 ```
 
 ---
