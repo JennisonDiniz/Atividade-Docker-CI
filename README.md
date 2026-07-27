@@ -241,7 +241,7 @@ Após a correção, o workflow passou com sucesso:
 
 ![CI Verde - Corrigido Status](./docs/imagens/15-actions-verde-corrigido.png03.png)
 
-![CI Verde - Corrigido Logs](./docs/imagens/15-actions-verde-corrigido.png02.png)
+![CI Verde - Corrigido Logs](docs/imagens/15-actions-verde-corrigido.png`.png)
 
 ### Aprendizado
 
