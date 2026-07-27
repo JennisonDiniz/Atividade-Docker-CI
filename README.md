@@ -145,7 +145,7 @@ https://github.com/JennisonDiniz/Atividade-Docker-CI/pull/1
 ### Print 9 — execução vermelha ❌ + log do erro
 *[Print mostrando a execução vermelha com o erro de conexão ao banco de dados]*
 ---
-### 8. Dificuldades e aprendizados
+###8. Dificuldades e aprendizados
 
 Inicialmente, a maior dificuldade foi entender como Docker Compose gerencia networking e healthchecks. Configurar o `depends_on` com `condition: service_healthy` foi crucial — sem isso, o app tentava conectar no MySQL antes do banco estar pronto, gerando ECONNREFUSED.
 Também aprendemos na prática a diferença entre volumes nomeados e dados transitórios. Ver os dados desaparecerem sem volume, e depois persisti-los com volume, tornou muito claro o conceito de stateless vs stateful.
