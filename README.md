@@ -147,7 +147,9 @@ Restauramos a variável `MYSQL_PASSWORD=secret` no arquivo `.env.example` e no `
 ### Link do Pull Request
 https://github.com/JennisonDiniz/Atividade-Docker-CI/pull/1
 ### Print 9 — execução vermelha ❌ + log do erro
-*[Print mostrando a execução vermelha com o erro de conexão ao banco de dados]*
+![Print mostrando a execução vermelha com o erro de conexão ao banco de dados](docs/imagens/13-actions-vermelho01.png)
+![Print mostrando a execução vermelha com o erro de conexão ao banco de dados](docs/imagens/13-action-vermelho02.png)
+![Print mostrando a execução vermelha com o erro de conexão ao banco de dados](docs/imagens/13-action-vermelho03.png)
 ---
 
 ## 8. Dificuldades e aprendizados
