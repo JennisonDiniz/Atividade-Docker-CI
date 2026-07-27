@@ -54,7 +54,7 @@ docker rm -f todo
 docker run -d -p 3000:3000 -v todo-db:/etc/todos --name todo todo-app:v1
 # ... as tarefas continuam lá!
 ```
-### Print 3 — SEM volume: dados perdidos ao recriar o container
+## Print 3 — SEM volume: dados perdidos ao recriar o container
 *![Sem Volume - Lista Vazia](./docs/imagens/04-sem-volume-lista-vazia.png)*
 ### Print 4 — COM volume: dados preservados
 *![Com Volume - Dados Persistem](./docs/imagens/05-com-volume-dados-persistem.png.png)*
@@ -62,7 +62,7 @@ docker run -d -p 3000:3000 -v todo-db:/etc/todos --name todo todo-app:v1
 ###Diferença entre `docker compose down` e `docker compose down -v`
 `docker compose down` derruba os containers mas mantém os volumes nomeados com os dados intactos, permitindo que o próximo `up` recupere tudo. Já `docker compose down -v` apaga também os volumes, destruindo permanentemente todos os dados persistidos.
 ---
-### 4. Rede
+## 4. Rede
 **Rede criada:** `todo-net` (bridge)  
 **Serviços conectados:** app (Node.js) e db (MySQL)
 ###A porta do banco está exposta ao host? 
@@ -82,6 +82,7 @@ select * from todo_items;
 ```
 *![MySQL Select Tarefas](./docs/imagens/08-mysql-select-tarefas.png)*
 ---
+
 ## 5. Docker Compose
 **Serviços:** app (Node.js com build local), db (MySQL 8.0)  
 **Rede:** `todo-net` (nomeada explicitamente)  
@@ -115,8 +116,8 @@ docker compose up -d
 
 ![Compose - Dados Deletados](./docs/imagens/11-compose-down-v-lista-vazia.png)
 *Após docker compose down -v, volume é deletado e lista fica vazia*
-
 ---
+
 ## 6. Integração Contínua (GitHub Actions)
 **Arquivo do workflow:** `.github/workflows/ci.yml`  
 **Gatilhos:** push e pull_request
@@ -130,7 +131,7 @@ docker compose up -d
 *[Print da aba Actions do GitHub mostrando a execução bem-sucedida (todos os steps em verde)]*
 ---
 ## 7. Quebra proposital do CI
-### O que foi quebrado
+#### O que foi quebrado
 Alteramos o arquivo `.env.example` removendo a variável `MYSQL_PASSWORD`, deixando o banco sem autenticação.
 ### Erro que apareceu no log
 ```
@@ -145,8 +146,8 @@ https://github.com/JennisonDiniz/Atividade-Docker-CI/pull/1
 ### Print 9 — execução vermelha ❌ + log do erro
 *[Print mostrando a execução vermelha com o erro de conexão ao banco de dados]*
 ---
-###8. Dificuldades e aprendizados
 
+## 8. Dificuldades e aprendizados
 Inicialmente, a maior dificuldade foi entender como Docker Compose gerencia networking e healthchecks. Configurar o `depends_on` com `condition: service_healthy` foi crucial — sem isso, o app tentava conectar no MySQL antes do banco estar pronto, gerando ECONNREFUSED.
 Também aprendemos na prática a diferença entre volumes nomeados e dados transitórios. Ver os dados desaparecerem sem volume, e depois persisti-los com volume, tornou muito claro o conceito de stateless vs stateful.
 O workflow do CI foi excelente para validar tudo funcionando, especialmente forçar a quebra propositalmente. Quando o pipeline falhou, os logs foram muito claros sobre o real problema — nos ajudou a entender que CI não é só "passar", é ter confiança no que está rodando em produção.
