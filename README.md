@@ -129,7 +129,7 @@ docker compose up -d
 4. **Aguarda a aplicação e testa** → Espera resposta HTTP 200 em `/items` + POST de tarefa via API
 5. **Derruba a stack** → `docker compose down -v`
 ### Print 8 — execução verde ✅
-*[Print da aba Actions do GitHub mostrando a execução bem-sucedida (todos os steps em verde)]*
+*[Print da aba Actions do GitHub mostrando a execução bem-sucedida (./docs/imagens/docs/imagens/12-actions-verde01.png)]*
 ---
 ## 7. Quebra proposital do CI
 #### O que foi quebrado
