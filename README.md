@@ -349,4 +349,4 @@ git log --oneline -10
 **Alunos:** Jennison Enthony Oliveira Diniz, Rafael da Silva  
 **Turma:** Noturno
 
-**Status:** ✅ **CONCLUÍDO** — Todas as 6 partes implementadas e documentadas.
+**Status:** CONCLUÍDO** — Todas as 6 partes implementadas e documentadas.
