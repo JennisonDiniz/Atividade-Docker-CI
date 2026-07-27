@@ -65,9 +65,9 @@ docker run -d -p 3000:3000 -v todo-db:/etc/todos --name todo todo-app:v1
 ### 4. Rede
 **Rede criada:** `todo-net` (bridge)  
 **Serviços conectados:** app (Node.js) e db (MySQL)
-# A porta do banco está exposta ao host? 
+###A porta do banco está exposta ao host? 
 **Não.** O MySQL roda apenas internamente na rede `todo-net`, acessível apenas pelo nome `mysql`. Ele não tem `-p <porta>` mapeada, então está protegido do host.
-# Por que o app consegue chamar o host `mysql` sem saber o IP?
+Por que o app consegue chamar o host `mysql` sem saber o IP?
 Docker fornece um serviço de DNS interno na rede. Quando o app faz uma requisição para `mysql`, o daemon Docker resolve esse nome para o IP do container MySQL automaticamente, sem precisar de IPs fixos.
 ### Print 5 — docker network inspect
 ```bash
