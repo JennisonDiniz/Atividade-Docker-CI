@@ -59,7 +59,7 @@ docker run -d -p 3000:3000 -v todo-db:/etc/todos --name todo todo-app:v1
 ### Print 4 — COM volume: dados preservados
 *![Com Volume - Dados Persistem](./docs/imagens/05-com-volume-dados-persistem.png.png)*
 *![Docker Volume List](./docs/imagens/06-docker-volume-ls.png.png)*
-### Diferença entre `docker compose down` e `docker compose down -v`
+###Diferença entre `docker compose down` e `docker compose down -v`
 `docker compose down` derruba os containers mas mantém os volumes nomeados com os dados intactos, permitindo que o próximo `up` recupere tudo. Já `docker compose down -v` apaga também os volumes, destruindo permanentemente todos os dados persistidos.
 ---
 ### 4. Rede
@@ -145,7 +145,8 @@ https://github.com/JennisonDiniz/Atividade-Docker-CI/pull/1
 ### Print 9 — execução vermelha ❌ + log do erro
 *[Print mostrando a execução vermelha com o erro de conexão ao banco de dados]*
 ---
-## 8. Dificuldades e aprendizados
+### 8. Dificuldades e aprendizados
+
 Inicialmente, a maior dificuldade foi entender como Docker Compose gerencia networking e healthchecks. Configurar o `depends_on` com `condition: service_healthy` foi crucial — sem isso, o app tentava conectar no MySQL antes do banco estar pronto, gerando ECONNREFUSED.
 Também aprendemos na prática a diferença entre volumes nomeados e dados transitórios. Ver os dados desaparecerem sem volume, e depois persisti-los com volume, tornou muito claro o conceito de stateless vs stateful.
 O workflow do CI foi excelente para validar tudo funcionando, especialmente forçar a quebra propositalmente. Quando o pipeline falhou, os logs foram muito claros sobre o real problema — nos ajudou a entender que CI não é só "passar", é ter confiança no que está rodando em produção.
