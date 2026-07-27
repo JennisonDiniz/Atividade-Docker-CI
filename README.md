@@ -130,6 +130,8 @@ docker compose up -d
 5. **Derruba a stack** → `docker compose down -v`
 ### Print 8 — execução verde ✅
 ![Print da aba Actions do GitHub mostrando a execução bem-sucedida](./docs/imagens/12-actions-verde01.png)
+![Print da aba Actions do GitHub mostrando a execução bem-sucedida](docs/imagens/12-actions-verde02.png)
+![Print da aba Actions do GitHub mostrando a execução bem-sucedida](docs/imagens/12-actions-verde03.png)
 ---
 ## 7. Quebra proposital do CI
 #### O que foi quebrado
