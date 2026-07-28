@@ -355,39 +355,53 @@ git log --oneline -10
 ## CD — Publicação no Docker Hub
 
 **Aluno(a):** Jennison Enthony Oliveira Diniz
+
 **Turma:** Noturno
+
 **Usuário do Docker Hub:** jennisondiniz
+
 **Imagem publicada:** jennisondiniz/meu-projeto-docker:latest
+
 **Link da imagem no Docker Hub:** https://hub.docker.com/r/jennisondiniz/meu-projeto-docker
+
 **Dispara quando:** push na branch main
+
 **Arquivo do workflow:** .github/workflows/cd.yml
 
 **Print 1** — token criado no Docker Hub
-![Token criado](caminho/para/print1.png)
+
+![Token criado](docs/imagens/print1.png)
 
 **Print 2** — Secrets cadastrados no GitHub
-![Secrets no GitHub](caminho/para/print2.png)
+
+![Secrets no GitHub](docs/imagens/print2.png)
 
 **Print 3** — workflow de CD verde na aba Actions
-![Actions verde](caminho/para/print3.png)
+
+![Actions verde](docs/imagens/print3.png)
 
 **Print 4** — imagem publicada no Docker Hub
-![Imagem no Docker Hub](caminho/para/print4.png)
+
+![Imagem no Docker Hub](docs/imagens/print4.png)
 
 **Print 5** — docker pull baixando a imagem publicada
-![docker pull](caminho/para/print5.png)
+
+![docker pull](docs/imagens/print5.png)
 
 ### Respostas
 
 **1. O que é o Docker Hub?**
+
 É um repositório na nuvem para imagens Docker, parecido com o GitHub, mas em vez de guardar código-fonte, ele guarda as imagens já construídas das aplicações. Qualquer pessoa com acesso pode baixar e rodar a imagem sem precisar montar o ambiente do zero.
 
 **2. Qual a diferença entre o CI e o CD?**
+
 O CI (Integração Contínua) testa automaticamente se o código funciona toda vez que é enviado para o repositório — é o revisor que confere se está tudo certo. O CD (Entrega Contínua) vai um passo além: depois que o código passa nos testes, ele constrói a imagem Docker e a publica automaticamente no Docker Hub, deixando-a disponível para qualquer pessoa usar.
 
 **3. Por que usamos um token e Secrets em vez de escrever o usuário e a senha no arquivo cd.yml?**
+
 Porque o arquivo cd.yml fica público no repositório, e qualquer informação escrita nele pode ser vista por qualquer pessoa. Os Secrets do GitHub guardam esses dados de forma criptografada, e o token, diferente da senha, pode ser revogado a qualquer momento sem precisar trocar a senha da conta inteira. Isso evita expor credenciais de acesso.
 
 **4. O que significa a tag latest no endereço da imagem?**
-É a versão da imagem publicada. `latest` indica que essa é a versão mais recente enviada para o Docker Hub. Sempre que um novo push é feito na main, essa tag é atualizada com a versão mais nova da imagem.
 
+É a versão da imagem publicada. `latest` indica que essa é a versão mais recente enviada para o Docker Hub. Sempre que um novo push é feito na main, essa tag é atualizada com a versão mais nova da imagem.
