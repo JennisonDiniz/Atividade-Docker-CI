@@ -1,4 +1,4 @@
-# Atividade Docker + CI — Jennison Enthony Oliveira Diniz e Rafael da Silva
+# Atividade Docker + CI — Jennison Enthony Oliveira Diniz
 
 **Turma:** Noturno  
 **Data:** 26/07/2026  
@@ -346,7 +346,7 @@ git log --oneline -10
 ---
 
 **Entregue em:** 26/07/2026  
-**Alunos:** Jennison Enthony Oliveira Diniz, Rafael da Silva  
+**Alunos:** Jennison Enthony Oliveira Diniz  
 **Turma:** Noturno
 
 **Status:** CONCLUÍDO** — Todas as 6 partes implementadas e documentadas.
