@@ -370,7 +370,7 @@ git log --oneline -10
 
 **Print 1** — token criado no Docker Hub
 
-![Token criado](JennisonDiniz/Atividade-Docker-CI/docs/imagens/print1.png)
+![Token criado](JennisonDiniz/Atividade-Docker-CI/docs/imagens/print01.png)
 
 **Print 2** — Secrets cadastrados no GitHub
 
